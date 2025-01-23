@@ -1,20 +1,18 @@
-import React from 'react';
+import React from 'react'
 import GenerativeFill from '@/components/effects/GenerativeFill';
 import { Metadata } from 'next';
 
-interface EditPageProps {
-  params: {
-    id: string;
-  };
+
+const EditPage = async ({ params }: { params: Promise<{ id: string }> }) => {
+   
+    const { id } = await params;
+
+  return (
+    <GenerativeFill id={id}/>
+  )
 }
 
-const EditPage = ({ params }: EditPageProps) => {
-  const { id } = params;
-
-  return <GenerativeFill id={id} />;
-};
-
-export default EditPage;
+export default EditPage
 
 
 export const metadata: Metadata = {
