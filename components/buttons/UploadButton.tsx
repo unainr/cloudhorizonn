@@ -7,7 +7,6 @@ import { useRouter } from "next/navigation";
 const UploadButton = () => {
 	const route = useRouter();
 	const handleSuccess = (result: any) => {
-		console.log(result.info.public_id);
 		setTimeout(() => {
 			route.refresh();
 		}, 1000);

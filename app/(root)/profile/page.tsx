@@ -24,9 +24,8 @@ export default async function ProfilePage() {
   const { getUser } = getKindeServerSession();
   const user:any = await getUser();
 
-  if (!user?.id) {
-    // Handle the case where the user is not authenticated or session is missing
-    redirect("/"); // Redirect to the login page
+  if (!user) {
+    redirect("/api/auth/login");
   }
 
   const data = await getData(user.id);
