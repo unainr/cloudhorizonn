@@ -3,6 +3,7 @@ import UploadButton from "@/components/buttons/UploadButton";
 import cloudinary from "cloudinary";
 import CloudinaryImage from "@/components/CloudinaryImage";
 import Link from "next/link";
+import { Metadata } from "next";
 
 interface SearchResult {
   public_id: string;
@@ -34,3 +35,8 @@ const Gallery = async () => {
 };
 
 export default Gallery;
+
+export const metadata: Metadata = {
+  title: "Gallery | Cloud Horizon",
+  description: "Browse and manage your digital assets in Cloud Horizon's intuitive gallery interface",
+};

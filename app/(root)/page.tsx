@@ -3,7 +3,6 @@ import {
 	ArrowRight,
 	Sparkles,
 	Wand2,
-	Cloud,
 	Star,
 	Shield,
 	Zap,
